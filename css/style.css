@@ -48,11 +48,11 @@ h3{
 .btn-hover:hover{
     color:white;
 }
-li:hover .border{
+.categories li:hover .border-bottom{
     display:block;
 }
 
-.border{
+.border-bottom{
     background-color: lime;
     width:40%;
     left:50%;
@@ -64,6 +64,11 @@ li:hover .border{
 
 li{
     position:relative;
+}
+
+li a{
+    color:var(--greytxt);
+    font-weight:600;
 }
 
 /* main */
@@ -108,8 +113,28 @@ aside{
 }
 .logo-container a img{
     padding:20px;
-    
 }
+.top-nav{
+    width:100%;
+}
+
+.top-nav li{
+    list-style:none;
+    width:100%;
+    padding:5px;
+}
+.top-nav li span{
+    display:inline-block;
+}
+.icon{
+    width:40px;
+    margin-left:10px;
+}
+
+.top-nav li:hover {
+    border-left:5px solid lime;
+}
+
 
 /* sezione btn upgrade */
 
@@ -122,6 +147,7 @@ aside{
     align-items:center;
     position:fixed;
     top:0;
+    z-index:1;
 }
 .upgrade > a{
     border:1px solid white;
@@ -150,10 +176,10 @@ aside{
 }
 
 .categories ul li a{
-    color:var(--greytxt);
+    
     text-transform:uppercase;
     padding:10px 15px;
-    font-weight:600;
+    
 }
 
 /* recently played */
