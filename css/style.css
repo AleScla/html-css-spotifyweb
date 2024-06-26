@@ -9,13 +9,81 @@
 html{
     font-family: "Montserrat", sans-serif;
 }
+
+:root{
+    --grey:#282828;
+    --darkblue:#141922;
+    --greytxt:#7D7F84;
+}
 /* general */
 .container{
     width:100%;
+    display:flex;
+    flex-wrap:wrap;
 }
 
+a{
+    text-decoration:none;
+}
 
 /* main */
+main{
+    background-color:var(--darkblue);
+}
+aside{
+    width:200px;
+    background-color:black;
+    height:calc(100vh - 100px);
+    position:sticky;
+    min-height:300px;
+}
+.main-section{
+    width:calc(100% - 200px);
+}
+
+/* sezione btn upgrade */
+
+.upgrade{
+    min-height:100px;
+    background-color:rgba(0, 0, 0, 0.5);
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    position:sticky;
+}
+.upgrade > a{
+    border:1px solid white;
+    padding: 10px 50px;
+    color:white;
+    margin-right:15px;
+    border-radius:20px;
+    font-weight:600;
+    text-transform:uppercase;
+}
+
+/* sezione categories */
+.categories ul{
+    text-align:center;
+}
+.categories ul li{
+    display:inline-block;
+    list-style:none;
+    margin-top:15px;  
+}
+
+.categories ul li a{
+    color:var(--greytxt);
+    text-transform:uppercase;
+    padding:10px 15px;
+    font-weight:600;
+}
 
 /* footer */
-
+footer{
+    width:100%;
+    height:100px;
+    background-color:var(--grey);
+    position:fixed;
+    bottom:0;
+}
