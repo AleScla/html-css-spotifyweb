@@ -15,6 +15,10 @@ html{
     --darkblue:#141922;
     --greytxt:#7D7F84;
 }
+
+img{
+    max-width:100%;
+}
 /* general */
 .container{
     width:100%;
@@ -25,6 +29,22 @@ html{
 a{
     text-decoration:none;
 }
+h2{
+    color:white;
+    font-size:2.2rem;
+    margin-top:40px;
+}
+
+h3{
+    font-size:1.5rem;
+    color:white;
+    padding:10px 0;
+}
+
+.main-section section:not(.upgrade){
+    margin-left:20px;
+
+}
 
 /* main */
 main{
@@ -34,11 +54,30 @@ aside{
     width:200px;
     background-color:black;
     height:calc(100vh - 100px);
-    position:sticky;
+    position:fixed;
     min-height:300px;
+    
 }
 .main-section{
     width:calc(100% - 200px);
+    margin-left:200px;
+    overflow:scroll;
+    scrollbar-width:none;
+    margin-bottom:120px;
+    
+}
+
+.row{
+    display:flex;
+    width:100%;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+section > p{
+    color:var(--greytxt);
+    padding:15px 0;
+    font-weight:600;
 }
 
 /* sezione btn upgrade */
@@ -46,11 +85,12 @@ aside{
 .upgrade{
     min-height:100px;
     background-color:rgba(0, 0, 0, 0.5);
-    width:100%;
+    width:calc(100% - 200px);
     display:flex;
     justify-content:flex-end;
     align-items:center;
-    position:sticky;
+    position:fixed;
+    top:0;
 }
 .upgrade > a{
     border:1px solid white;
@@ -63,6 +103,9 @@ aside{
 }
 
 /* sezione categories */
+.categories{
+    margin-top:120px;
+}
 .categories ul{
     text-align:center;
 }
@@ -77,6 +120,71 @@ aside{
     text-transform:uppercase;
     padding:10px 15px;
     font-weight:600;
+}
+
+/* recently played */
+
+
+.col-1-6{
+    width:calc((100% / 6) - 40px);
+    margin-right:20px;
+}
+
+.card{
+    width:100%;
+    cursor:pointer;
+}
+
+.upper-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.upper-card{
+    position:relative;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.5);
+    overflow:hidden;
+    display:none;
+}
+
+.overlay i{
+    position:absolute;
+    color:white;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.card:hover .overlay{
+    display:block;
+    
+}
+
+.lower-card{
+    width:100%;
+    text-align:center;
+}
+
+.lower-card span{
+    color: var(--greytxt);
+    font-weight:600;
+}
+
+/* sezione artisti più popolari */
+
+.popular-artists .upper-card{
+    border-radius:50%;
+    width:100%;
+    height:100%;
+    overflow:hidden;
 }
 
 /* footer */
