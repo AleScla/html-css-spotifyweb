@@ -43,24 +43,38 @@ h3{
 
 .main-section section:not(.upgrade){
     margin-left:20px;
+}
 
+.btn-hover:hover{
+    color:white;
+}
+li:hover .border{
+    display:block;
+}
+
+.border{
+    background-color: lime;
+    width:40%;
+    left:50%;
+    transform: translateX(-50%);
+    padding-top:3px;
+    position:absolute;
+    display:none;
+}
+
+li{
+    position:relative;
 }
 
 /* main */
+
 main{
     background-color:var(--darkblue);
 }
-aside{
-    width:200px;
-    background-color:black;
-    height:calc(100vh - 100px);
-    position:fixed;
-    min-height:300px;
-    
-}
+
 .main-section{
-    width:calc(100% - 200px);
-    margin-left:200px;
+    width:calc(100% - 250px);
+    margin-left:250px;
     overflow:scroll;
     scrollbar-width:none;
     margin-bottom:120px;
@@ -80,12 +94,29 @@ section > p{
     font-weight:600;
 }
 
+/* aside */
+
+aside{
+    width:250px;
+    background-color:black;
+    height:calc(100vh - 100px);
+    position:fixed;
+    min-height:300px; 
+}
+.logo-container{
+    width:80%;
+}
+.logo-container a img{
+    padding:20px;
+    
+}
+
 /* sezione btn upgrade */
 
 .upgrade{
     min-height:100px;
     background-color:rgba(0, 0, 0, 0.5);
-    width:calc(100% - 200px);
+    width:calc(100% - 250px);
     display:flex;
     justify-content:flex-end;
     align-items:center;
@@ -100,6 +131,9 @@ section > p{
     border-radius:20px;
     font-weight:600;
     text-transform:uppercase;
+}
+#upgradebtn:hover{
+    transform:scale(1.1)
 }
 
 /* sezione categories */
