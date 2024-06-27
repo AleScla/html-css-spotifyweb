@@ -38,7 +38,7 @@ h2{
 }
 
 h3{
-    font-size:1.5rem;
+    font-size:1.2rem;
     color:white;
     padding:10px 0;
 }
@@ -123,17 +123,18 @@ aside{
     flex-direction:column; 
 }
 
-
-
 .logo-container{
     width:80%;
 }
+
 .logo-container a img{
     padding:20px;
 }
+
 .top-nav{
     width:100%;
 }
+
 .screen-xs{
     display:none;
     width:100%;
@@ -146,9 +147,11 @@ h4{
     padding:10px 20px;
     margin-bottom:5px;
 }
+
 .top-nav li span{
     display:inline-block;
 }
+
 .icon{
     width:40px;
 }
@@ -156,8 +159,6 @@ h4{
 .top-nav li:hover {
     border-left:5px solid lime;
 }
-
-
 
 .middle-nav{
     overflow-y:auto;
@@ -461,6 +462,16 @@ footer .container.flex{
 @media screen and (max-width:1100px){
     :root{
         --colwidth:calc((100% / 4) - 40px);
+        
+    }
+    .col-1-6{
+        margin-bottom:10px;
+    }
+    .col-1-6 h3{
+        font-size:0.9rem;
+    }
+    .col-1-6 .lower-card span{
+        font-size:0.8rem;
     }
 }
 
@@ -478,17 +489,17 @@ footer .container.flex{
     .logo-container{
         width:100%;
     }
+
     .logo-container a img {
         padding: 5px;
     }
+
     .top-nav li {
         width: 100%;
         padding: 10px;
         margin-bottom: 5px;
     }
-
-  
-
+    
     #spotify-logo,
     .top-nav li a > span:not(.icon),
     .middle-nav,
@@ -501,7 +512,7 @@ footer .container.flex{
         width: 40px;
         height: 40px;
     }
-
+    
     .screen-xs{
         display:block;
     }
@@ -509,10 +520,11 @@ footer .container.flex{
     .top-nav{
         flex-grow:1;
     }
-    
+
     .bottom-nav{
         text-align:center;
     }
+
     .bottom-nav >* {
         margin:0;
     }
@@ -525,8 +537,4 @@ footer .container.flex{
         justify-content: center;
         margin-top:10px;
     }
-
-    
-    
-    
 }
