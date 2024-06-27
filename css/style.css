@@ -14,6 +14,8 @@ html{
     --grey:#282828;
     --darkblue:#141922;
     --greytxt:#7D7F84;
+    --colwidth:calc((100% / 6) - 40px);
+    --asidewidth:250px;
 }
 
 img{
@@ -89,8 +91,8 @@ main{
 }
 
 .main-section{
-    width:calc(100% - 250px);
-    margin-left:250px;
+    
+    margin-left:var(--asidewidth);
     overflow:scroll;
     scrollbar-width:none;
     margin-bottom:120px;
@@ -112,7 +114,7 @@ section > p{
 /* aside */
 
 aside{
-    width:250px;
+    width:var(--asidewidth);
     background-color:black;
     height:calc(100vh - 100px);
     position:fixed;
@@ -130,6 +132,10 @@ aside{
     padding:20px;
 }
 .top-nav{
+    width:100%;
+}
+.screen-xs{
+    display:none;
     width:100%;
 }
 
@@ -209,7 +215,7 @@ a.flex{
 .upgrade{
     min-height:100px;
     background-color:rgba(0, 0, 0, 0.5);
-    width:calc(100% - 250px);
+    width:calc(100% - var(--asidewidth));
     display:flex;
     justify-content:flex-end;
     align-items:center;
@@ -252,7 +258,7 @@ a.flex{
 
 
 .col-1-6{
-    width:calc((100% / 6) - 40px);
+    width:var(--colwidth);
     margin-right:20px;
 }
 
@@ -330,6 +336,7 @@ footer{
 .ftr-left,.ftr-right{
     width:30%;
 }
+
 
 footer .container.flex{
     align-items:center;
@@ -446,4 +453,80 @@ footer .container.flex{
 
 .bar.smaller{
     width:100px;
+}
+
+
+/* responsive */
+
+@media screen and (max-width:1100px){
+    :root{
+        --colwidth:calc((100% / 4) - 40px);
+    }
+}
+
+@media screen and (max-width:700px){
+    :root{
+        --colwidth:calc((100% / 2) - 40px);
+    }
+}
+
+@media screen and (max-width:600px){
+    :root{
+        --asidewidth:60px
+    }
+
+    .logo-container{
+        width:100%;
+    }
+    .logo-container a img {
+        padding: 5px;
+    }
+    .top-nav li {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+  
+
+    #spotify-logo,
+    .top-nav li a > span:not(.icon),
+    .middle-nav,
+    .bottom-nav > a span,
+    .profile-container h4 {
+        display:none;
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .screen-xs{
+        display:block;
+    }
+
+    .top-nav{
+        flex-grow:1;
+    }
+    
+    .bottom-nav{
+        text-align:center;
+    }
+    .bottom-nav >* {
+        margin:0;
+    }
+
+    .bottom-nav > a {
+        padding:10px;
+    }
+
+    .profile-container {
+        justify-content: center;
+        margin-top:10px;
+    }
+
+    
+    
+    
 }
