@@ -320,4 +320,45 @@ footer{
     background-color:var(--grey);
     position:fixed;
     bottom:0;
+    left:0;
+}
+
+footer .container.flex{
+    justify-content:space-between;
+    align-items:center;
+    height:100%;
+    padding-left:10px;
+}
+.ftr-left{
+    display:flex;
+    align-items:center;
+}
+
+.album-container{
+    height:60px;
+    width:60px;
+    margin-right:10px;
+}
+.album-container img{
+    width:100%;
+
+}
+
+.song-description h5{
+    color:white;
+
+}
+.song-description div{
+    color:var(--greytxt);
+    font-size:0.8rem;
+    font-weight:600;
+}
+
+.song-icons{
+    color:var(--greytxt);
+    margin-left:30px;
+}
+
+.song-icons i{
+    margin-right:10px;
 }
