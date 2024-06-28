@@ -164,6 +164,7 @@ h4{
     overflow-y:auto;
     scrollbar-width:none;
     flex-grow:1;
+    min-height: 200px;
 }
 .bottom-nav{
     justify-self:flex-end;
